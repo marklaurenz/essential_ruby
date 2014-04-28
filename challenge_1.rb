@@ -13,15 +13,16 @@
 #   we usually have to do some research on how the task is done:
 #   http://en.wikipedia.org/wiki/Mortgage_calculator
 
-rate = 0.01
-nper = 60
-pv = 30000
-pmt = (rate*pv)/(1-(1+rate)**-nper)
-# def pmt(rate, nper, pv)
-#   return pmt
-# end
+# rate = 0.01
+# nper = 60
+# pv = 30000
 
-puts "Your monthly payment will be #{pmt}"
+
+def pmt(rate, nper, pv)
+ pmt = (rate*pv)/(1-(1+rate)**-nper)
+end
+
+puts "Your monthly payment will be #{pmt(0.01, 60, 30000)}."
 
 
 # Example usage of the method:
